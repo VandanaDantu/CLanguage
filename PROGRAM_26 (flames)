@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+int main()
+{
+   char bname[20];
+   char gname[20];
+   printf("enter boy name:");
+   gets(bname);
+   printf("enter girl name:");
+   gets(gname);
+   int a=strlen(bname);
+   int b=strlen(gname);
+   for(int i=0;i<a;i++)
+   {
+       for(int j=0;j<b;j++)
+       {
+           if(bname[i]==gname[j])
+           {
+               bname[i]='1';
+               gname[i]='1';
+           }
+       }
+   }
+   int a1=0;
+   for(int i=0;i<a;i++)
+   {
+
+       if(bname[i]!='1')
+        a1=a1+1;
+   }
+   int b1=0;
+   for(int i=0;i<b;i++)
+   {
+
+       if(gname[i]!='1')
+        b1=b1+1;
+   }
+   int tot=a1+b1;
+   switch(tot)
+   {
+         case 1:printf("friend");
+                break;
+         case 2:printf("love");
+                break;
+         case 3:printf("affection");
+                break;
+         case 4:printf("marraige");
+                break;
+         case 5:printf("effection");
+                break;
+         case 6:printf("sister");
+                break;
+         default:printf("enter smaller names");
+   }
+}
