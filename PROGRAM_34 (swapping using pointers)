@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+
+    int *p,*q,a=5,b=4;
+    p=&a;
+    q=&b;
+    printf("%d and %d\n",a,b);
+    printf("%p\n",p);
+    printf("%p\n",q);
+    swap(&a,&b);
+    printf("%d and %d\n",a,b);
+    printf("%p\n",p);
+    printf("%p\n",q);
+}
+int swap(int *n,int  *m)
+{
+   int temp;
+   temp=*n;
+   *n=*m;
+   *m=temp;
+   return n,m;
+}
