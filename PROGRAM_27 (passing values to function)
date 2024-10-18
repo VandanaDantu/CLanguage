@@ -1,3 +1,5 @@
+//Program_1//
+
 #include<stdio.h>
 int function1(int n,int m)
 {
@@ -11,4 +13,35 @@ int main()
     int b=5;
     printf("the sum is %d",funtion1(a,b));
     return 0;
+}
+
+//Program_2//
+
+#include<stdio.h>
+int function1(int n,int m)
+{
+    int sum;
+    sum=n+m;
+    return sum;
+}
+int function2(int n,int m)
+{
+    int sub;
+    sub=n-+m;
+    return sub;
+}
+int function3(int n,int m)
+{
+    int mul;
+    mul=n*m;
+    return mul;
+}
+int main()
+{
+    int a=3;
+    int b=4;
+    printf(" sum is %d ",function1(a,b));
+    printf(" \nsub is %d ",function2(a,b));
+    printf(" \nmul is %d ",function3(a,b));
+
 }
