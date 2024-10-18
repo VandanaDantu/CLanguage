@@ -1,0 +1,14 @@
+#include<stdio.h>
+int function1(int n,int m)
+{
+   int sum;
+   sum=n+m;
+   return sum;
+}
+int main()
+{
+    int a=4;
+    int b=5;
+    printf("the sum is %d",funtion1(a,b));
+    return 0;
+}
