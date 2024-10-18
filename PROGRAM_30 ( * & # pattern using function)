@@ -1,24 +1,5 @@
 \\Program_1\\
 
-#include <stdio.h>
-
-int main() 
-{
-    int n;
-    printf("enter no of rows:");
-    scanf("%d",&n);
-   for(int i=n;i>=1;i--)
-    {
-        for(int j=1;j<=i;j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-}
-
-\\Program_2\\
-
 #include<stdio.h>
 #include<conio.h>
 #include<stdio.h>
@@ -40,5 +21,48 @@ int main()
     printf("enetr no of rows:");
     scanf("%d",&a);
     star(a);
+    return(0);
+}
+
+\\Program_2\\
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdio.h>
+int star(int n),hash(int n);
+int star(int n)
+{
+    for(int i=n;i>=1;i--)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int hash(int n)
+{
+    for(int i=n;i>=1;i--)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int a;
+    int s;
+    printf("enetr no of rows:\n");
+    scanf("%d",&a);
+    printf("what kind of pattern you want:\n1.star \n2.hash\n");
+    scanf("%d",&s);
+    if(s==1)
+      star(a);
+    else
+        hash(a);
     return(0);
 }
