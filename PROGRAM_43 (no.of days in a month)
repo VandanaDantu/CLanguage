@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int month, year;
+    printf("Enter month (1-12): ");
+    scanf("%d", &month);
+    printf("Enter year: ");
+    scanf("%d", &year);
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+    {
+        daysInMonth[1] = 29;
+    }
+    if (month >= 1 && month <= 12)
+    {
+        printf("Month %d, %d has %d days.\n", month, year, daysInMonth[month - 1]);
+    }
+    else
+    {
+        printf("Invalid month. Please enter 1-12.\n");
+    }
+
+    return 0;
+}
+
+
