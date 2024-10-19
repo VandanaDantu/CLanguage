@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+    FILE *ptr;
+    ptr = fopen("document.txt", "r");
+    if (ptr == NULL)
+    {
+        printf("File not found or unable to open.\n");
+    }
+    fclose(ptr);
+}
